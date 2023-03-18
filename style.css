@@ -285,3 +285,15 @@ a {
         transform: translateX(0);
     }
 }
+
+
+@media all and (max-width: 375px){
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
