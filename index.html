@@ -3,13 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+          content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="styleRegistered.css" media="(max-width: 480px)"> -->
     <title>Регистрация</title>
 </head>
 <body>
-    <section class="aside"><h1>Sign up</h1></section>
+    <section class="aside">
+        <h1>Sign up</h1>
+    </section>
     <section class="form_successfully">
         <main>
         <h1>Thank You!</h1>
@@ -20,42 +23,37 @@
         </footer>
     </section>
     <section class="content">
+        <div class="up"></div>
+        <span class="submit-spinner submit-spinner_hide"></span>
         <header>
             <h2>New user?</h2>
             <p>Use the form below to create your account.</p>
         </header>
         <main>
-        <form>
-            <div class="column">
-                <label for="firstName">First Name</label> <input type="text" id="firstName">
-                <label>Nationality</label>
-<!--                <input list="Nations" id="Nation">-->
-                <select id="Nations"></select>
-                <label>Date of Birth</label>
-<!--                <input type="date" id="Date">-->
-                <div class="date">
-                <select id="day"></select>
-                <select id="mounth"></select>
-                <select id="year"></select>
-                </div>
-                <label for="Password">Password</label> <input type="text" id="Password">
-            </div>
-            <div class="column">
-                <label for="lastName">Last Name</label> <input type="text" id="lastName">
-                <label for="E-mail">E-mail</label> <input type="email" id="E-mail">
-                <label>Gender</label>
+            <form action="#" method="post">
+                <label>First Name <input type="text" id="firstName"></label>
+                <label>Last Name <input type="text" id="lastName"></label>
+                <label>Nationality<select id="Nations"></select></label>
+                <label>E-mail <input type="email" id="E-mail" required></label>
+                <label>Date of Birth
+                    <div class="date">
+                        <select id="day"></select>
+                        <select id="mounth"></select>
+                        <select id="year"></select>
+                    </div>
+                </label>
+                <label>Gender
                 <div class="radio_row">
-                    <input type="radio" name="Gender"><label class="radio_text">Male</label>
+                    <input type="radio" name="Gender" checked><label class="radio_text">Male</label>
                     <input type="radio" name="Gender"><label class="radio_text">Female</label>
-                </div>
-                <label for="Confirm">Confirm Password</label><input type="password" id="Confirm">
-            </div>
+                </div></label>
+                <label>Password <input type="password" id="Password"></label>
+                <label>Confirm Password<input type="password" id="Confirm"></label>
         </form>
-            <img src="./image/Shape.svg" alt=''>
         </main>
         <footer>
             <p>Have an account? <a href="">Login</a></p>
-            <input type="submit" value="Complete Signup" id="btn">
+            <button type="submit" id="btn">Complete Signup</button>
         </footer>
     </section>
     <script src="scrtipt.js"></script>

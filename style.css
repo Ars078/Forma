@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
 
 * {
@@ -13,33 +13,28 @@ html {
 
 body {
     display: grid;
-    grid-template-columns: 0.52fr 2fr;
+    grid-template-columns: 0.26fr 1fr;
     font-family: 'Work Sans', sans-serif;
     font-weight: 400;
     color: rgba(17, 17, 17, 1);
     -webkit-text-fill-color: rgba(17, 17, 17, 1);
     position: relative;
-    width: 665px;
+    max-width: 665px;
     /*height: 480px;*/
-    background: rgba(255, 255, 255, 1);
-    margin: 0 auto;
+    margin: 60px auto;
     z-index: -2;
-}
-
-.form_successfully {
-    display: none;
-    margin-bottom: 38.52px;
 }
 
 .aside {
     background: rgba(90, 97, 237, 1);
-    /*width: 137.2px;*/
     position: relative;
+    padding: 20px;
 }
+
 
 .aside > h1 {
     font-family: "PT Sans", sans-serif;
-    font-size: 41px;
+    font-size: 49px;
     font-weight: 400;
     line-height: 63px;
     letter-spacing: 0.5px;
@@ -47,34 +42,18 @@ body {
     -webkit-text-fill-color: white;
     transform: rotate(-90deg);
     /*width: 100px;*/
-    height: 63px;
-    position: relative;
-    left: calc(50% - 63px/2 - 5px);
-    top: calc(50% - 126px/2 + 185px);
-}
-
-.form_successfully > main > h1 {
-    font-family: 'Work Sans', sans-serif;
-    font-size: 22px;
-    line-height: 25.78px;
-    letter-spacing: -0.46px;
-    color: rgba(17, 17, 17, 1);
-    margin-bottom: 11px;
-}
-
-.form_successfully > main {
-    padding: 216px 315px 179px 63.8px;
-}
-
-.form_successfully > footer {
-    padding-left: 20.8px;
-    margin-top: 0;
+    /*height: 63px;*/
+    position: absolute;
+    left: calc(50% - 95px/2 - 5px);
+    top: calc(50% - 155px/2 + 185px);
+    white-space: nowrap;
 }
 
 .content {
     display: flex;
     flex-direction: column;
-    margin: 38.52px 20.8px;
+    padding: 39px 22px 33px 21px;
+    background: url("./image/Shape.svg") no-repeat right bottom, rgba(255, 255, 255, 1);
 }
 
 h2 {
@@ -94,25 +73,20 @@ form {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin-top: 20px;
-    gap: 15px;
-}
-
-.column {
-    display: flex;
-    flex-direction: column;
+    column-gap: 13px;
+    margin-bottom: 82px;
 }
 
 label {
+    display: flex;
+    flex-direction: column;
     color: rgba(124, 124, 124, 1);
     font-size: 12px;
     font-weight: 300;
     line-height: 14.06px;
-    margin-bottom: 4px;
-    margin-top: 16.5px;
-}
-
-label:first-child {
-    margin-top: 0;
+    margin-bottom: 16px;
+    gap: 4px;
+    /*margin-top: 16px;*/
 }
 
 .radio_text {
@@ -120,7 +94,7 @@ label:first-child {
     font-size: 14px;
     font-weight: 400;
     line-height: 16.41px;
-    margin-right: 19px;
+    margin-right: 13px;
     margin-top: 0;
 }
 
@@ -150,19 +124,22 @@ select:last-child, #Nations {
 
 .date {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .date > select:nth-child(1) {
     padding-right: 34.3px;
+    /* min-width: 55px; */
 }
 .date > select:nth-child(2) {
     padding-right: 12.3px;
+    /* min-width: 90px; */
 }
 
 input[type='radio'] {
     position: relative;
-    height: 16px;
-    width: 16px;
+    height: 10px;
+    width: 10px;
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -176,8 +153,8 @@ input[type='radio']::before {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 12px;
-    height: 12px;
+    width: 10px;
+    height: 10px;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     background-color: white;
@@ -199,29 +176,23 @@ input[type='radio']:checked::after {
 
 .radio_row {
     display: flex;
+    align-items: baseline;
     gap: 6px;
     margin: 0.5px 0;
     height: 22px;
-}
-
-img {
-    position: absolute;
-    top: 130px;
-    right: 0;
-    z-index: -1;
 }
 
 footer {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-top: 104.3px;
+    /*margin-top: 104.3px;*/
 }
 
 footer > p {
     font-size: 13px;
-    font-weight: 200;
-    line-height: 15.25px;
+    /*font-weight: 200;*/
+    /*line-height: 15.25px;*/
     color: rgba(0, 0, 0, 1);
 }
 a {
@@ -244,12 +215,72 @@ a {
     -webkit-border-radius: 0;
 }
 
+.form_successfully {
+    display: none;
+    padding: 216px 21px 43.8px;
+    /*margin-bottom: 38.52px;*/
+}
+
+.form_successfully > main > h1 {
+    font-family: 'Work Sans', sans-serif;
+    font-size: 22px;
+    line-height: 25.78px;
+    letter-spacing: -0.46px;
+    color: rgba(17, 17, 17, 1);
+    margin-bottom: 11px;
+}
+
+.form_successfully > main {
+    padding-left: 43px;
+}
+
+.form_successfully > footer {
+    /*padding-left: 20.8px;*/
+    margin-top: 152px;
+}
+
 .swing
 {
     -webkit-animation: swing 1s ease;
     animation: swing 1s ease;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
+}
+
+@keyframes spinner-border {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.submit-spinner {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    vertical-align: -0.125em;
+    border: 2px solid currentColor;
+    border-right-color: transparent;
+    border-radius: 50%;
+    -webkit-animation: .75s linear infinite spinner-border;
+    animation: .75s linear infinite spinner-border;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+.up {
+    background: #a7a7a7;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 30%;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.submit-spinner_hide, .up{
+    display: none;
 }
 
 @keyframes swing
@@ -286,14 +317,34 @@ a {
     }
 }
 
+@media (max-width: 480px){
+    body {
+        display: grid;
+        grid-template-columns: 1fr;
+        margin: 0 auto;
+    }
 
-@media all and (max-width: 375px){
+    .aside {
+        padding: 5px;
+    }
+
+    .aside > h1 {
+        font-size: 36px;
+        transform: none;
+        position: unset;
+    }
     form {
         display: flex;
         flex-direction: column;
+        margin-bottom: 40px;
     }
     footer {
         display: flex;
         flex-direction: column;
+        gap: 20px;
+    }
+
+    .submit-spinner {
+        position: fixed;
     }
 }
